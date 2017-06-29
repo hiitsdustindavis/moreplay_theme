@@ -1,0 +1,32 @@
+/* Reset */
+/* End Reset */
+body {
+  font-family: Helvetica, sans-serif;
+  color: dodgerblue;
+  background: floralwhite; }
+
+header {
+  background: dodgerblue;
+  color: white;
+  padding: 1rem; }
+
+footer {
+  background: navy;
+  color: white;
+  padding: 1rem; }
+
+footer a {
+  color: white; }
+
+/* Section Main */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+/* Single Post */
+.post {
+  margin: 2rem 0; }
+
+.post2 {
+  color: #ff6666;
+  background-color: #0000cc; }

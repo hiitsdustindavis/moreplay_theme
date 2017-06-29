@@ -1,0 +1,15 @@
+{
+  "name": "moreplay_theme-master",
+  "version": "1.0.0",
+  "description": "## Description   Building a theme from scratch using Alessandro Castellani's WordPress 101 tutorial series: http://www.alecaddd.com/wordpress-101-wordpress-beginner-developers/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dustin Davis",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1"
+  }
+}
