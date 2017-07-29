@@ -26,12 +26,18 @@
     -->
     <header>
       <section class="container">
-        <h1>This is the header!</h1>
-        <!--
-        wp_nav_menu() accepts an array of a ton of parameters. Remember the '=>' operator signifies a key=>value pair.
-        theme_location is a preset key and its value must match the specific name you created
-        See the codex: https://developer.wordpress.org/reference/functions/wp_nav_menu/
-        -->
-      <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+        <div class="row">
+          <div class="col-md-3">
+            <h1><a href="http://localhost:8888/">This is the header!</a></h1>
+          </div>
+          <div class="col-md-6 offset-md-3">
+            <!--
+            wp_nav_menu() accepts an array of a ton of parameters. Remember the '=>' operator signifies a key=>value pair.
+            theme_location is a preset key and its value must match the specific name you created
+            See the codex: https://developer.wordpress.org/reference/functions/wp_nav_menu/
+          -->
+          <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+          </div>
+        </div>
       </section>
     </header>

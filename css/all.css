@@ -10,6 +10,10 @@ header {
   color: white;
   padding: 1rem; }
 
+.menu li {
+  display: inline;
+  margin-right: 30px; }
+
 footer {
   background: navy;
   color: white;

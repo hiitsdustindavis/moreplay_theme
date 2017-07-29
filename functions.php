@@ -158,3 +158,52 @@ function moreplay_widget_setup() {
 }
 
 add_action('widgets_init','moreplay_widget_setup');
+
+/*
+	========================================
+		CUSTOM POST TYPE
+	========================================
+*/
+// The custom post type allows us to control every aspect of the post properties and Appearance
+
+function bang_custom_post_type() {
+	$labels = array( //All labels below will appear in the admin. There are many.
+		'name' => 'BangBang',
+		'singular_name' => 'BangBang', //this is the name that displays in the admin
+		'add_new' => 'Add a Bang', //add new button label
+		'all_items' => 'All Items',
+		'edit_item' => 'Edit Item',
+		'new_item' => 'New Item',
+		'view_item' => 'View Item',
+		'search_item' => 'Seach BangBang',
+		'not_found' => 'No Items Found',
+		'not_found_in_trash' => 'No Items Found in Trash',
+		'parent_item_colon' => 'Parent Item'
+	);
+	$args = array( //The args array specifies how the custom post appears
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => true, //this parameter specifies if this post has an archive that it links correctly
+		'publically_queryable' => true, //means that this custom post type can be publically accessed with a custom query
+		'query_var' => true, //is the lowercase name that we will use when we register the post type
+		'rewrite' => true, //allows you to rewrite the slug
+		'capability_type' => 'post', //grabs the basic settings of the default post type
+		'hierachical' => false, //specifying false makes this post type independent
+		'supports' => array( //Activate the type of supports (aka all the fields to appear) you want for this post type
+			'title',
+			'editor',
+			'excerpt',
+			'thumbnail',
+			'revision', //WIll automatically save previous versions in the database
+			//there are many other options to active: https://codex.wordpress.org/Function_Reference/post_type_supports
+		),
+		'taxonomies' => array( 'category', 'post_tag'), //LEARN MORE ABOUT THIS !!!!!
+		'menu_position' => 5, //numeric value starting at from the top
+		'exclude_from_search' => false,//when a user does a search we can exclude this post type from the results
+	);
+
+	register_post_type('bangbang', $args); //first argument is the slug. The second is all of the arguments of this custom post type.
+
+}
+
+add_action('init', 'bang_custom_post_type');
